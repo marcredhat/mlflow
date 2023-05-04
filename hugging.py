@@ -1,3 +1,5 @@
+#https://raw.githubusercontent.com/marcredhat/mlflow/main/hugging.py
+
 #https://github.com/santiagxf/mlflow-deployments/blob/main/transformer-classifier/bert-for-classification.ipynb
 #https://santiagof.medium.com/effortless-models-deployment-with-mlflow-packing-a-nlp-product-review-classifier-from-huggingface-13be2650333
 
@@ -152,7 +154,7 @@ class BertTextClassifier(PythonModel):
 
 import mlflow
 import mlflow.pyfunc
-mlflow.set_experiment('bert-classification')
+mlflow.set_experiment('bert-classificationmarc')
 
 with mlflow.start_run(run_name="marc"):
     mlflow.pyfunc.log_model('classifier', 
@@ -165,14 +167,19 @@ with mlflow.start_run(run_name="marc"):
 
 
 
-mlflow.set_experiment('bert-classification')
-mlflow.start_run
+#mlflow.set_experiment('bert-classification3')
+#mlflow.start_run
 
+#cp -r /home/cdsw/.experiments/1nb0-rfzn-jla8-4b5h/i9gd-qxsj-chvf-yxva/artifacts/classifier/* .
 import mlflow
 #load_model OT IMPLEMENTED but manual steps available at https://docs.google.com/document/d/1R0I-RBfKAZ4vD_ciSMqEcT6buvU_VK0o5yQhDIMg4pc/edit#
 #https://github.com/frischHWC/cml-experiences/blob/main/weather-model-with-ml-flow.py
 #model = mlflow.pyfunc.load_model('models:/bert-rating-classification/latest')
 #model.predict(sample)
 
+model=mlflow.pyfunc.load_model('/home/cdsw/marc/rating_classifier')
+model.predict(sample)
 
 
+
+  
