@@ -177,7 +177,34 @@ import mlflow
 #model = mlflow.pyfunc.load_model('models:/bert-rating-classification/latest')
 #model.predict(sample)
 
-model=mlflow.pyfunc.load_model('/home/cdsw/marc/rating_classifier')
+#curl -L https://bit.ly/marcmflowhug -o marcmlflowhug
+#cdsw@9vas0764gnl879eu:~/testmarc$ tar -xvzf marcmlflowhug
+#rating_classifier/
+#rating_classifier/config.json
+#rating_classifier/pytorch_model.bin
+#rating_classifier/tokenizer_config.json
+#rating_classifier/special_tokens_map.json
+#rating_classifier/vocab.txt
+#rating_classifier/tokenizer.json
+#rating_classifier/MLmodel
+#rating_classifier/conda.yaml
+#rating_classifier/python_env.yaml
+#rating_classifier/python_model.pkl
+#rating_classifier/requirements.txt
+#rating_classifier/artifacts/
+#rating_classifier/artifacts/tokenizer.json
+#rating_classifier/artifacts/vocab.txt
+#rating_classifier/artifacts/special_tokens_map.json
+#rating_classifier/artifacts/tokenizer_config.json
+#rating_classifier/artifacts/pytorch_model.bin
+#rating_classifier/artifacts/config.json
+
+
+#cdsw@9vas0764gnl879eu:~/testmarc$ pwd
+#/home/cdsw/testmarc
+#cdsw@9vas0764gnl879eu:~/testmarc$ ls
+#marcmlflowhug  rating_classifier
+model=mlflow.pyfunc.load_model('/home/cdsw/testmarc/rating_classifier')
 model.predict(sample)
 
 
